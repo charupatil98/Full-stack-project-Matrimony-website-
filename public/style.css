@@ -1,0 +1,114 @@
+
+
+
+
+.nav-bar{
+  background: #F07857; font-family: calibri; padding: 30px;
+  margin-top: 20px;
+ 
+}
+.navdiv{
+  display: flex; align-items: center; justify-content: space-between;
+  
+}
+.logo1 a{
+  font-size: 35px; font-weight: 600; color: white;
+  text-decoration: none;
+}
+li{
+  list-style: none; display: inline-block;
+  text-align: center;
+  
+}
+li a {
+  color: white; font-size: 25px; font-weight: bold; margin-right: 25px;
+  text-decoration: none; line-height: 10%;
+ 
+}
+ li a:hover {
+  background-color: rgb(229, 229, 145);
+  padding: 15px;
+  
+}
+
+
+.container{
+  background-color: rgb(214, 206, 194);
+  margin-top: 100px;
+  padding: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  margin-right: 20px;
+  
+}
+  .container h2{
+  font-family:  "Noto Sans", serif;
+  margin-top: 0px;
+  
+}
+
+/*.container input[type=text]{
+  width: 400px;
+}
+.container input[type=password]{
+  width: 400px;
+}*/
+.container img{
+  border-radius: 15px 50px;
+  height: 500px;
+  width: 400px;
+  float: right;
+  margin-right: 20px;
+}
+
+.container button a{
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.container-fluid{
+  color: white;
+ 
+}
+
+
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #f093fb;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to bottom right, rgba(240, 147, 251, 1), rgba(245, 87, 108, 1));
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to bottom right, rgba(240, 147, 251, 1), rgba(245, 87, 108, 1))
+  }
+  
+  .card-registration .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: .75em;
+  padding-right: .75em;
+  }
+  .card-registration .select-arrow {
+  top: 13px;
+  }
+
+.tbl{
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 100px;
+  margin-bottom: 200px;
+  padding: 15px;
+ 
+
+}
+.footer{
+  padding: 20px;
+  
+}
+.footer row{
+  margin-left: 20px;
+  margin-top: 20px;
+}

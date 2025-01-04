@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="/public/style.css">
+  <base href="/"> 
+</head>
+<body>
+  <%- include('../partials/navbar') %>
+
+  <div class="container py-5 h-75 shadow-lg p-3 mb-5 bg-body rounded" >
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
+            <div class="alert alert-primary" role="alert">
+              Edit Users<%=user2.name%> data Here
+            </div>
+  <form method="post" action="/updatedata/<%=user2._id%>" enctype="multipart/form-data" >
+    <div class="row">
+      <div class="col-md-6 mb-4 w-50">
+
+        <div data-mdb-input-init class="form-outline">
+          <input type="text" id="firstName" class="form-control form-control-lg" name="name"  value="<%=user2.name%>"/>
+          <label class="form-label" for="firstName">Enter Name</label>
+        </div>
+
+      </div>
+      
+      
+      <div class="col-md-6 mb-4">
+
+        <div data-mdb-input-init class="form-outline">
+          <input type="number" id="lastName" class="form-control form-control-lg" name="age" value="<%=user2.age%>"/>
+          <label class="form-label" for="lastName">Age</label>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-4 d-flex align-items-center">
+
+        <div data-mdb-input-init class="form-outline datepicker w-100">
+          <input type="date" class="form-control form-control-lg" id="birthdayDate" name="birthdate" value="<%=user2.birthdate%>" />
+          <label for="birthdayDate" class="form-label">Birthdate</label>
+        </div>
+
+      </div>
+      <div class="col-md-6 mb-4">
+
+        <div data-mdb-input-init class="form-outline">
+          <input type="text" id="lastName" class="form-control form-control-lg" name="gender"  value="<%=user2.gender%>"/>
+          <label class="form-label" for="lastName">Enter gender</label>
+        </div>
+
+      </div>
+     
+
+    <div class="row">
+      <div class="col-md-6 mb-4 pb-2">
+
+        <div data-mdb-input-init class="form-outline">
+          <input type="text" id="emailAddress" class="form-control form-control-lg" name="education" value="<%=user2.education%>"/>
+          <label class="form-label" for="emailAddress">Education</label>
+        </div>
+
+      </div>
+      <div class="col-md-6 mb-4 pb-2">
+
+        <div data-mdb-input-init class="form-outline">
+          <input type="tel" id="phoneNumber" class="form-control form-control-lg" name="phone" value="<%=user2.phone%>"/>
+          <label class="form-label" for="phoneNumber">Phone Number</label>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+
+        <select class="select form-control-lg w-50" name="religion" value="<%=user2.religion%>">
+          <option value="Hindi" disabled>Hindu</option>
+          <option value="Hindi">Hindu</option>
+          <option value="Muslim">Muslim</option>
+          <option value="Sikh">Sikh</option>
+        </select>
+        <label class="form-label select-label">Religion</label>
+
+      </div><br>
+      <div class=" mb-5 pb-2">
+        <br>
+        <label for="formFileLg" class="form-label">Upload image</label>
+        <input class="form-control form-control-lg" id="formFileLg" type="file" name="image">
+        <img src="<%=user2.image%>" width="70" height="20" class="img-thumbnail">
+        <input type="hidden" name="old_image"  value="<%=user2.image%>" >
+      </div>
+    </div>
+
+    <div class="mt-2 pt-2 ">
+      <input data-mdb-ripple-init class="btn btn-primary btn-lg" type="submit" value="Submit" />
+    </div>
+
+  </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  
+
+  <%- include('../partials/footer') %>
+</body>
+</html>
